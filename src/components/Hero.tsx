@@ -110,7 +110,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 30, y: 20 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
-            className="absolute bottom-1/4 -right-4 sm:right-4 lg:-right-8 z-20 bg-dark/80 backdrop-blur-xl border border-white/10 p-4 rounded-2xl shadow-2xl flex flex-col gap-2"
+            className="absolute bottom-8 sm:bottom-1/4 -right-2 sm:right-4 lg:-right-8 z-20 bg-dark/80 backdrop-blur-xl border border-white/10 p-4 rounded-2xl shadow-2xl flex flex-col gap-2 scale-90 sm:scale-100 origin-bottom-right"
           >
             <div className="flex text-teal-400 gap-1">
               <Star className="w-4 h-4 fill-current" />
