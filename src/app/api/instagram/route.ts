@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const token = process.env.INSTAGRAM_TOKEN
+  const token = process.env.INSTAGRAM_TOKEN || 'EAA9Fddrs4fQBRZBAJ7ldDztnDYwViYoLwEsmwGcrdvK0tZABquEH17O3jMMU5V9ZCDs0OcPOLlvWjn2agtNFeoYNHf2u8ZCQ4nUzUrnsKZCwPm8XEnrgNRco2QOoJzyt4w6vtaQKJeB53gx2RtQ99Hq7QnVdrIB22ZAtDUS6ETiZBE5XbpUWZC9ZBg5nBdPAZCYm6ZBmEVefZB47CxZAsP3PMT4tGAI6ZCTz5C77razECPodS8dBJXz04gwWoKWO5WvYJrAOGP1Cp3n3R0T92Uc30WedLQzFXC5sygGuZB9pkwSScyvxkZAYoaowkzltEXOXsEU9mDboJ0v6XGNUYbOd'
 
   // Fallback data if no token is provided
   const fallbackData = [

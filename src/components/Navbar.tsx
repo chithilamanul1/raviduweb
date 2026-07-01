@@ -56,18 +56,20 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-dark/95 backdrop-blur-md py-4 border-b border-white/5' : 'bg-transparent py-6'
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-dark/40 backdrop-blur-xl py-3 border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]' 
+          : 'bg-dark/10 backdrop-blur-md py-5 border-b border-white/5 shadow-[0_4px_24px_rgba(0,0,0,0.1)]'
       }`}
     >
       <div className="container mx-auto px-8 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <div className="relative h-20 w-64 md:h-24 md:w-80 -ml-4 invert brightness-0 hover:opacity-80 transition-opacity">
+        <Link href="/" className="flex items-center flex-shrink-0 z-50">
+          <div className="relative h-12 w-36 md:h-20 md:w-64 -ml-2 invert brightness-0 hover:opacity-80 transition-opacity">
             <Image
               src="/logo.png"
               alt="Ravindu J Logo"
               fill
-              className="object-contain object-left scale-125 md:scale-150 origin-left"
+              className="object-contain object-left scale-110 md:scale-150 origin-left"
             />
           </div>
         </Link>
