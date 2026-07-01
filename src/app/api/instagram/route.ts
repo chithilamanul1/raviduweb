@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const token = process.env.INSTAGRAM_TOKEN || 'EAA9Fddrs4fQBRZBAJ7ldDztnDYwViYoLwEsmwGcrdvK0tZABquEH17O3jMMU5V9ZCDs0OcPOLlvWjn2agtNFeoYNHf2u8ZCQ4nUzUrnsKZCwPm8XEnrgNRco2QOoJzyt4w6vtaQKJeB53gx2RtQ99Hq7QnVdrIB22ZAtDUS6ETiZBE5XbpUWZC9ZBg5nBdPAZCYm6ZBmEVefZB47CxZAsP3PMT4tGAI6ZCTz5C77razECPodS8dBJXz04gwWoKWO5WvYJrAOGP1Cp3n3R0T92Uc30WedLQzFXC5sygGuZB9pkwSScyvxkZAYoaowkzltEXOXsEU9mDboJ0v6XGNUYbOd'
+  const token = process.env.INSTAGRAM_TOKEN || 'EAA9Fddrs4fQBR7EpGPo7Ww4OHkh6BKVOUVFG6aVZBZAYc45jf7EbfAg38qGryc4ZBeZChT2Bgrki3edAapQRizdN0ZA1VBoKrpGgtylSVVYhuUqg8WOEA3ZBzm6WM9shKqzkvXxcy168YyQW5kDQuRibT1JiRnrO4Kma7P2kAX6rVG2mzhnr5HtbZB2CeeZB7ZA23KNzKa74dPEP5pUj79VJDnVLpMUpOMh2jgnUt'
 
   // Fallback data if no token is provided
   const fallbackData = [
@@ -36,26 +36,56 @@ export async function GET() {
   ]
 
   if (!token) {
-    return NextResponse.json({ 
-      error: 'Missing INSTAGRAM_TOKEN environment variable. Using fallback data.',
-      data: fallbackData 
-    })
+    return NextResponse.json({ data: fallbackData })
   }
 
   try {
-    // Official Instagram Basic Display API
-    const res = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${token}&limit=4`, {
-      next: { revalidate: 3600 } // Cache for 1 hour to prevent rate limiting
-    })
-    
-    const data = await res.json()
-    
-    if (data.error) {
-      console.error('Instagram API Error:', data.error)
+    let posts = []
+
+    // If it's a Facebook Graph API Token (Starts with EAA)
+    if (token.startsWith('EAA')) {
+      const accountsRes = await fetch(`https://graph.facebook.com/v19.0/me/accounts?fields=instagram_business_account&access_token=${token}`)
+      const accountsData = await accountsRes.json()
+
+      if (accountsData.data && accountsData.data.length > 0) {
+        // Find the first linked Instagram Business Account
+        const igAccount = accountsData.data.find((page: any) => page.instagram_business_account)
+        
+        if (igAccount) {
+          const igId = igAccount.instagram_business_account.id
+          const mediaRes = await fetch(`https://graph.facebook.com/v19.0/${igId}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp,like_count,comments_count&access_token=${token}&limit=4`)
+          const mediaData = await mediaRes.json()
+          
+          if (mediaData.data) {
+            posts = mediaData.data
+          }
+        } else {
+          console.error("Facebook Token provided, but no linked Instagram Business Account found on any pages.")
+        }
+      } else {
+        console.error("Facebook Token provided, but no pages found. Ensure the token has 'pages_show_list' and 'instagram_basic' permissions.")
+      }
+    } 
+    // Otherwise, assume it's an Instagram Basic Display API Token (Starts with IGQ)
+    else {
+      const res = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${token}&limit=4`, {
+        next: { revalidate: 3600 }
+      })
+      const data = await res.json()
+      
+      if (data.data) {
+        posts = data.data
+      } else {
+        console.error("Instagram API Error:", data.error)
+      }
+    }
+
+    if (posts.length > 0) {
+      return NextResponse.json({ data: posts })
+    } else {
       return NextResponse.json({ data: fallbackData })
     }
 
-    return NextResponse.json({ data: data.data || fallbackData })
   } catch (error) {
     console.error('Failed to fetch Instagram posts:', error)
     return NextResponse.json({ data: fallbackData })
