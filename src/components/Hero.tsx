@@ -100,8 +100,8 @@ export function Hero() {
               <Music className="w-5 h-5 text-teal-400" />
             </div>
             <div>
-              <div className="text-white font-bold text-lg leading-none">150+</div>
-              <div className="text-gray-400 text-xs font-medium uppercase tracking-wider mt-1">Live Shows</div>
+              <div className="text-white font-bold text-lg leading-none">5+ Years</div>
+              <div className="text-gray-400 text-xs font-medium uppercase tracking-wider mt-1">Experienced Guitar Teacher</div>
             </div>
           </motion.div>
 
