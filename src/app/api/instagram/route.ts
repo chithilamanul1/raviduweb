@@ -28,7 +28,7 @@ export async function GET() {
     },
     { 
       id: 'mock4', 
-      media_url: 'https://images.unsplash.com/photo-1460723237483-7a5d506996d9?q=80&w=600&auto=format&fit=crop', 
+      media_url: 'https://images.unsplash.com/photo-1516280440502-601ab6b49042?q=80&w=600&auto=format&fit=crop', 
       permalink: 'https://www.instagram.com/ravindu_jayathilake_/',
       like_count: 156,
       comments_count: 8

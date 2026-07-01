@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     siteName: 'Ravindu Jayathilake',
     images: [
       {
-        url: '/hero.png', // The transparent hero image can act as a fallback OG image
-        width: 800,
-        height: 600,
+        url: 'https://wsrv.nl/?url=https://raviduweb-seven.vercel.app/hero.png&w=1200&h=630&fit=contain&bg=111827&output=jpg',
+        width: 1200,
+        height: 630,
         alt: 'Ravindu Jayathilake',
       },
     ],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'Ravindu Jayathilake | Professional Guitarist',
     description: 'Experience the soul of music. Studio sessions and expert guitar tuition.',
     creator: '@ravidujayathilake', // Placeholder handle
-    images: ['/hero.png'],
+    images: ['https://wsrv.nl/?url=https://raviduweb-seven.vercel.app/hero.png&w=1200&h=630&fit=contain&bg=111827&output=jpg'],
   },
   robots: {
     index: true,
@@ -75,7 +75,7 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Ravindu Jayathilake",
               "url": "https://raviduweb-seven.vercel.app",
-              "image": "https://raviduweb-seven.vercel.app/hero.png",
+              "image": "https://wsrv.nl/?url=https://raviduweb-seven.vercel.app/hero.png&w=1200&h=630&fit=contain&bg=111827&output=jpg",
               "sameAs": [
                 "https://www.youtube.com/@ravindujayathilake",
                 "https://open.spotify.com/artist/1mBWnXPQL79wj8qNXgGhkh",
