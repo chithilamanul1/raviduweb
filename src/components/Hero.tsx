@@ -17,7 +17,7 @@ export function Hero() {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="text-[18vw] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white/[0.07] to-transparent whitespace-nowrap"
         >
-          GUITARIST
+          GUITARIST & ARTIST
         </motion.div>
       </div>
 

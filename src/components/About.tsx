@@ -26,7 +26,7 @@ export function About() {
             
             <div className="space-y-4 text-sm md:text-base text-gray-400 leading-relaxed text-justify md:text-left mb-8 md:mb-10 font-sans">
               <p>
-                Based in the cultural heart of Kandy, Sri Lanka, I am a dedicated professional guitarist, composer, and music educator. My journey with the guitar began over a decade ago, evolving from a passionate hobby into a lifelong pursuit of musical excellence.
+                Based in the cultural heart of Kandy, Sri Lanka, I am a dedicated professional guitarist, artist, composer, and music educator. My journey with the guitar began over a decade ago, evolving from a passionate hobby into a lifelong pursuit of musical excellence.
               </p>
               <p>
                 Throughout my career, I've had the privilege of performing at various prestigious venues, collaborating with renowned local artists, and participating in intensive studio recording sessions. My style blends contemporary acoustic techniques with classical foundations, allowing for a versatile and deeply emotive sound.

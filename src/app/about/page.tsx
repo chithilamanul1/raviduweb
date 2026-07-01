@@ -2,7 +2,7 @@ import { About } from '../../components/About'
 
 export const metadata = {
   title: 'About | Ravindu Jayathilake',
-  description: 'Learn more about Ravindu Jayathilake, a professional guitarist and musician dedicated to the craft of playing and teaching.',
+  description: 'Learn more about Ravindu Jayathilake, a professional guitarist and artist dedicated to the craft of playing and teaching.',
 }
 
 export default function AboutPage() {

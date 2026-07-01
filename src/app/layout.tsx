@@ -6,11 +6,11 @@ import { Footer } from '../components/Footer'
 export const metadata: Metadata = {
   metadataBase: new URL('https://raviduweb-seven.vercel.app'),
   title: {
-    default: 'Ravindu Jayathilake | Professional Guitarist & Musician',
+    default: 'Ravindu Jayathilake | Professional Guitarist & Artist',
     template: '%s | Ravindu Jayathilake',
   },
   description: 'Experience the soul of music through every string. Specialized in studio sessions and expert guitar tuition in Kandy, Sri Lanka.',
-  keywords: ['Ravindu Jayathilake', 'Guitarist', 'Musician', 'Guitar Classes', 'Kandy', 'Sri Lanka', 'Studio Musician'],
+  keywords: ['Ravindu Jayathilake', 'Guitarist', 'Artist', 'Musician', 'Guitar Classes', 'Kandy', 'Sri Lanka', 'Studio Musician'],
   authors: [{ name: 'Ravindu Jayathilake' }],
   creator: 'Ravindu Jayathilake',
   publisher: 'Ravindu Jayathilake',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Ravindu Jayathilake | Professional Guitarist',
+    title: 'Ravindu Jayathilake | Professional Guitarist & Artist',
     description: 'Specialized in studio sessions and expert guitar tuition in Kandy, Sri Lanka.',
     url: 'https://raviduweb-seven.vercel.app',
     siteName: 'Ravindu Jayathilake',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ravindu Jayathilake | Professional Guitarist',
+    title: 'Ravindu Jayathilake | Professional Guitarist & Artist',
     description: 'Experience the soul of music. Studio sessions and expert guitar tuition.',
     creator: '@ravidujayathilake', // Placeholder handle
     images: ['https://wsrv.nl/?url=https://raviduweb-seven.vercel.app/hero.png&w=1200&h=630&fit=contain&bg=111827&output=jpg'],
@@ -81,7 +81,7 @@ export default function RootLayout({
                 "https://open.spotify.com/artist/1mBWnXPQL79wj8qNXgGhkh",
                 "https://www.instagram.com/ravidujayathilake"
               ],
-              "jobTitle": "Professional Guitarist & Musician",
+              "jobTitle": "Professional Guitarist & Artist",
               "worksFor": {
                 "@type": "Organization",
                 "name": "Freelance"
