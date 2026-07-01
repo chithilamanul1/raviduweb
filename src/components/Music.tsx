@@ -53,7 +53,7 @@ export function Music() {
               Music & Performances
             </h2>
             <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Immerse yourself in a collection of original compositions, high-energy live performances, and intricate studio sessions. My musical journey is constantly evolving, blending soulful melodies with technical precision.
+              Immerse yourself in a collection of original compositions, high-energy covers, and intricate studio sessions. My musical journey is constantly evolving, blending soulful melodies with technical precision.
             </p>
           </motion.div>
 

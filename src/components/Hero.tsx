@@ -46,7 +46,7 @@ export function Hero() {
           </h1>
           
           <p className="mt-6 text-gray-400 max-w-md text-sm sm:text-base leading-relaxed">
-            Experience the soul of music through every string. Specialized in live performances, studio sessions, and expert guitar tuition.
+            Experience the soul of music through every string. Specialized in studio sessions and expert guitar tuition.
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

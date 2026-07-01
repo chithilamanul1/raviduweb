@@ -4,13 +4,13 @@ import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ravidujayathilake.com'), // Assuming the domain, will help with canonicals
+  metadataBase: new URL('https://raviduweb-seven.vercel.app'),
   title: {
     default: 'Ravindu Jayathilake | Professional Guitarist & Musician',
     template: '%s | Ravindu Jayathilake',
   },
-  description: 'Experience the soul of music through every string. Specialized in live performances, studio sessions, and expert guitar tuition in Kandy, Sri Lanka.',
-  keywords: ['Ravindu Jayathilake', 'Guitarist', 'Musician', 'Guitar Classes', 'Kandy', 'Sri Lanka', 'Live Performance', 'Studio Musician'],
+  description: 'Experience the soul of music through every string. Specialized in studio sessions and expert guitar tuition in Kandy, Sri Lanka.',
+  keywords: ['Ravindu Jayathilake', 'Guitarist', 'Musician', 'Guitar Classes', 'Kandy', 'Sri Lanka', 'Studio Musician'],
   authors: [{ name: 'Ravindu Jayathilake' }],
   creator: 'Ravindu Jayathilake',
   publisher: 'Ravindu Jayathilake',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Ravindu Jayathilake | Professional Guitarist',
-    description: 'Specialized in live performances, studio sessions, and expert guitar tuition in Kandy, Sri Lanka.',
-    url: 'https://ravidujayathilake.com',
+    description: 'Specialized in studio sessions and expert guitar tuition in Kandy, Sri Lanka.',
+    url: 'https://raviduweb-seven.vercel.app',
     siteName: 'Ravindu Jayathilake',
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ravindu Jayathilake | Professional Guitarist',
-    description: 'Experience the soul of music. Live performances, studio sessions, and expert guitar tuition.',
+    description: 'Experience the soul of music. Studio sessions and expert guitar tuition.',
     creator: '@ravidujayathilake', // Placeholder handle
     images: ['/hero.png'],
   },
@@ -74,8 +74,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Ravindu Jayathilake",
-              "url": "https://ravidujayathilake.com",
-              "image": "https://ravidujayathilake.com/hero.png",
+              "url": "https://raviduweb-seven.vercel.app",
+              "image": "https://raviduweb-seven.vercel.app/hero.png",
               "sameAs": [
                 "https://www.youtube.com/@ravindujayathilake",
                 "https://open.spotify.com/artist/1mBWnXPQL79wj8qNXgGhkh",
