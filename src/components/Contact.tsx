@@ -91,7 +91,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Location</div>
-                  <div className="text-lg">Colombo, Sri Lanka</div>
+                  <div className="text-lg">Kandy, Sri Lanka</div>
                 </div>
               </div>
             </div>
