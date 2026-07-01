@@ -6,9 +6,8 @@ import { ChevronLeft, ChevronRight, Play, Disc3, Mic2, Music as MusicIcon } from
 const CHANNEL_URL = 'https://www.youtube.com/@ravindujayathilake'
 
 const stats = [
-  { label: 'Original Tracks', value: '15+', icon: Disc3 },
-  { label: 'Live Shows', value: '100+', icon: Mic2 },
-  { label: 'Cover Songs', value: '50+', icon: MusicIcon },
+  { label: 'Original Tracks', value: '1', icon: Disc3 },
+  { label: 'Cover Songs', value: '10+', icon: MusicIcon },
 ]
 
 const videos = [
