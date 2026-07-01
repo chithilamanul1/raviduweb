@@ -36,10 +36,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left z-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-            <span className="text-xs font-medium text-gray-300 tracking-widest uppercase">Available for Booking</span>
-          </div>
+
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-sans font-bold tracking-tight text-white leading-[1.1] mb-4">
             RAVIDU
