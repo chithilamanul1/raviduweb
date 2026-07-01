@@ -34,9 +34,14 @@ export function Footer() {
         <div className="text-lg font-serif tracking-widest text-white uppercase">
           Ravidu Jayathilake
         </div>
-        <p className="text-gray-500 text-sm text-center">
-          © {new Date().getFullYear()} Ravidu Jayathilake. All rights reserved.
-        </p>
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-gray-500 text-sm text-center">
+            © {new Date().getFullYear()} Ravidu Jayathilake. All rights reserved.
+          </p>
+          <p className="text-gray-500 text-xs text-center">
+            Site made by seranex.lk and chithila manul +94728382638
+          </p>
+        </div>
         <div className="flex gap-5">
           {socials.map(({ Icon, href, label }) => (
             <a
