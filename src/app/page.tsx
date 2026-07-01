@@ -1,4 +1,8 @@
 import { Hero } from '../components/Hero'
+import { FeaturedVideo } from '../components/FeaturedVideo'
+import { Testimonials } from '../components/Testimonials'
+import { SocialFeed } from '../components/SocialFeed'
+import { Newsletter } from '../components/Newsletter'
 
 export const metadata = {
   title: 'Ravindu Jayathilake - Home',
@@ -9,6 +13,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <FeaturedVideo />
+      <Testimonials />
+      <SocialFeed />
+      <Newsletter />
     </>
   )
 }
