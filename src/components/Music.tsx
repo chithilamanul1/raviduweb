@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -135,3 +136,4 @@ export function Music() {
     </section>
   )
 }
+

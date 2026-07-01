@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Guitar, ArrowRight } from 'lucide-react'
@@ -72,3 +73,4 @@ export function Classes() {
     </section>
   )
 }
+

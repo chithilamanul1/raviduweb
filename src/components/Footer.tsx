@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { Youtube, Instagram } from 'lucide-react'
 const SpotifyIcon = ({ className }: { className?: string }) => (
@@ -60,3 +61,4 @@ export function Footer() {
     </footer>
   )
 }
+

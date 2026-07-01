@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Instagram, Youtube } from 'lucide-react'
@@ -188,3 +189,4 @@ export function Contact() {
     </section>
   )
 }
+

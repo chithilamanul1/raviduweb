@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import { Menu, X, Youtube, Instagram } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -160,3 +161,4 @@ export function Navbar() {
     </header>
   )
 }
+
