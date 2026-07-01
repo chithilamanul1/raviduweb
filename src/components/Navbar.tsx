@@ -62,13 +62,12 @@ export function Navbar() {
     >
       <div className="container mx-auto px-8 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          {/* Logo with inverted colors if needed, but the image is black script font, so we use brightness invert to make it visible on dark bg */}
-          <div className="relative h-10 w-48 invert brightness-0 hover:opacity-80 transition-opacity">
+          <div className="relative h-20 w-64 md:h-24 md:w-80 -ml-4 invert brightness-0 hover:opacity-80 transition-opacity">
             <Image
               src="/logo.png"
               alt="Ravindu J Logo"
               fill
-              className="object-contain object-left"
+              className="object-contain object-left scale-125 md:scale-150 origin-left"
             />
           </div>
         </Link>
