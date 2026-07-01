@@ -7,14 +7,14 @@ export async function GET() {
   const fallbackData = [
     { 
       id: 'mock1', 
-      media_url: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=600&auto=format&fit=crop', 
+      media_url: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=600&auto=format&fit=crop', 
       permalink: 'https://www.instagram.com/ravindu_jayathilake_/',
       like_count: 124,
       comments_count: 12
     },
     { 
       id: 'mock2', 
-      media_url: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=600&auto=format&fit=crop', 
+      media_url: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop', 
       permalink: 'https://www.instagram.com/ravindu_jayathilake_/',
       like_count: 89,
       comments_count: 5
