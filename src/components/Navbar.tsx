@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { Menu, X, Youtube, Instagram } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -39,12 +40,18 @@ const links = [
   { name: 'ABOUT', href: '/about' },
   { name: 'MUSIC', href: '/music' },
   { name: 'CLASSES', href: '/classes' },
-  { name: 'CONTACT', href: '/contact' },
+  { name: 'LOGIN', href: '/login' },
+  { name: 'ADMIN', href: '/admin' },
 ]
 
 export function Navbar() {
+  const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  if (pathname?.startsWith('/admin')) {
+    return null
+  }
 
   useEffect(() => {
     const handleScroll = () => {

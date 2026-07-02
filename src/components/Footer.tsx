@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import { usePathname } from 'next/navigation'
 import { Youtube, Instagram } from 'lucide-react'
 const SpotifyIcon = ({ className }: { className?: string }) => (
   <svg
@@ -29,6 +30,12 @@ const socials = [
   },
 ]
 export function Footer() {
+  const pathname = usePathname()
+
+  if (pathname?.startsWith('/admin')) {
+    return null
+  }
+
   return (
     <footer className="bg-darker py-12 border-t border-white/5">
       <div className="container mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-6">
