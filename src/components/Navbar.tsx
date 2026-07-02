@@ -49,10 +49,6 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  if (pathname?.startsWith('/admin')) {
-    return null
-  }
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -60,6 +56,10 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  if (pathname?.startsWith('/admin')) {
+    return null
+  }
 
   return (
     <header
