@@ -68,12 +68,28 @@ export default function CheckoutPage() {
                   Transfer the total amount (LKR 3,000) to the account above and upload your receipt to instantly unlock your access.
                 </p>
                 
-                <button className="w-full py-3 px-4 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg transition duration-200 border border-gray-700 flex justify-center items-center gap-2">
+                {/* Hidden File Input */}
+                <input 
+                  type="file" 
+                  id="receipt-upload" 
+                  className="hidden" 
+                  accept="image/*"
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files[0]) {
+                      alert("File selected! We are wiring up the database to receive this file right now.");
+                    }
+                  }}
+                />
+                
+                <label 
+                  htmlFor="receipt-upload"
+                  className="w-full py-3 px-4 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg transition duration-200 border border-gray-700 flex justify-center items-center gap-2 cursor-pointer"
+                >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                   </svg>
-                  Upload Receipt
-                </button>
+                  Select Receipt Image
+                </label>
               </div>
 
               {/* OR Divider */}
