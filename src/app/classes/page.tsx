@@ -29,11 +29,11 @@ export default function ClassesPage() {
               <h2 className="text-2xl font-bold text-white mb-6">What's Included?</h2>
               <ul className="space-y-4">
                 {[
-                  'Full access to the constantly updated video library',
+                  'Access to 50+ structured video lessons',
+                  'Live interactive weekly Zoom classes',
                   'High-quality multi-angle video breakdowns',
                   'In-depth music theory and practical application',
-                  'Live performance techniques and stage presence',
-                  'Direct feedback and community access',
+                  'Direct feedback and student community access',
                 ].map((feature, idx) => (
                   <li key={idx} className="flex items-start">
                     <svg className="w-6 h-6 text-teal-500 mr-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
