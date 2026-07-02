@@ -4,26 +4,12 @@ import { motion } from 'framer-motion'
 import { Instagram, Heart, MessageCircle } from 'lucide-react'
 
 export function SocialFeed() {
-  const [posts, setPosts] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    async function fetchPosts() {
-      try {
-        const res = await fetch('/api/instagram')
-        const data = await res.json()
-        if (data.data) {
-          setPosts(data.data)
-        }
-      } catch (error) {
-        console.error('Failed to load Instagram posts', error)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchPosts()
-  }, [])
+  const posts = [
+    "https://www.instagram.com/p/DY2DHgxu5Z2/embed",
+    "https://www.instagram.com/p/DZF7flhzjRd/embed",
+    "https://www.instagram.com/p/DZxC_wqu8zw/embed",
+    "https://www.instagram.com/p/DX4hzFOuY6M/embed",
+  ]
 
   return (
     <section className="py-24 bg-dark relative border-t border-white/5 overflow-hidden">
@@ -57,44 +43,25 @@ export function SocialFeed() {
           </motion.a>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {loading ? (
-            // Skeleton loaders
-            [...Array(4)].map((_, i) => (
-              <div key={i} className="aspect-square bg-white/5 animate-pulse rounded-xl" />
-            ))
-          ) : (
-            posts.slice(0, 4).map((post, idx) => (
-              <motion.a
-                key={post.id}
-                href={post.permalink}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="relative aspect-square group overflow-hidden rounded-xl bg-darker block"
-              >
-                <img 
-                  src={post.media_type === 'VIDEO' ? post.thumbnail_url || post.media_url : post.media_url} 
-                  alt={post.caption || 'Instagram post'} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6">
-                  {/* Using placeholder numbers since Basic Display API doesn't return likes/comments */}
-                  <div className="flex items-center gap-2 text-white font-medium">
-                    <Heart className="w-5 h-5 fill-white" />
-                    <span>{post.like_count || Math.floor(Math.random() * 200 + 50)}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-white font-medium">
-                    <MessageCircle className="w-5 h-5 fill-white" />
-                    <span>{post.comments_count || Math.floor(Math.random() * 20 + 2)}</span>
-                  </div>
-                </div>
-              </motion.a>
-            ))
-          )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {posts.map((url, idx) => (
+            <motion.div
+              key={url}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="w-full h-[400px] overflow-hidden rounded-xl bg-white"
+            >
+              <iframe
+                src={url}
+                className="w-full h-full"
+                frameBorder="0"
+                scrolling="no"
+                allowTransparency={true}
+              ></iframe>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
