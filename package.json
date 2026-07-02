@@ -20,7 +20,7 @@
     "tailwind-merge": "2.6.1",
     "next-sanity": "9.12.3",
     "@sanity/image-url": "1.0.2",
-    "sanity": "3.68.3",
+    "sanity": "^3.99.0",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
